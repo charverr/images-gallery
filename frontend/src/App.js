@@ -19,6 +19,7 @@ const App = () => {
      .catch((err) =>{
         console.log(err);
      })
+    setWord('');
   }
 
   console.log(process.env.REACT_APP_USPLASH_KEY);
