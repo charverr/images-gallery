@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 const Search = ({ word, setWord, handleSubmit }) => {
   return (
@@ -29,4 +30,9 @@ const Search = ({ word, setWord, handleSubmit }) => {
   );
 };
 
+Search.propTypes = {
+  word: PropTypes.string.isRequired, // word prop should be a required string
+  setWord: PropTypes.func.isRequired, // setWord prop should be a required function
+  handleSubmit: PropTypes.func.isRequired, // handleSubmit prop should be a required function
+};
 export default Search;
