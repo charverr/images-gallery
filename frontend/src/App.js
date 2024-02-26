@@ -9,6 +9,8 @@ import Welcome from './components/Welcome';
 
 const USPLASH_KEY = process.env.REACT_APP_USPLASH_KEY;
 
+const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:5050"
+
 const App = () => {
   const [word, setWord] = useState('');
 
@@ -16,9 +18,7 @@ const App = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    fetch(
-      `https://api.unsplash.com/photos/random/?query=${word}&client_id=${USPLASH_KEY}`,
-    )
+    fetch(`${API_URL}/new-image?query=${word}`)
       .then((res) => res.json)
       .then((data) => {
         setImages([{ ...data,title:word}, ...images]); //use JavaScript spread operator in order to pull elements from particullar array
