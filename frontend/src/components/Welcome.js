@@ -9,7 +9,7 @@ const Welcome = () => (
       extra attention to featured content or information.
     </p>
     <p>
-      <Button bsStyle="primary" href="https://unsplash.com"
+      <Button bsstyle="primary" href="https://unsplash.com"
       target="_blank">
         Learn more
       </Button>
