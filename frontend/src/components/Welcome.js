@@ -1,5 +1,6 @@
-import React from "react";
-import { Jumbotron, Button } from "react-bootstrap";
+/* eslint-disable prettier/prettier */
+import React from 'react';
+import { Jumbotron, Button } from 'react-bootstrap';
 
 const Welcome = () => (
   <Jumbotron>
@@ -9,8 +10,7 @@ const Welcome = () => (
       extra attention to featured content or information.
     </p>
     <p>
-      <Button bsstyle="primary" href="https://unsplash.com"
-      target="_blank">
+      <Button bsstyle="primary" href="https://unsplash.com" target="_blank">
         Learn more
       </Button>
     </p>

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import { ReactComponent as Logo } from '../images/logo.svg';
