@@ -10,7 +10,6 @@ EXPOSE 5050
 #copy those two files to the image(./) to the WORKDIR
 COPY Pipfile Pipfile.lock ./
 
-
 #we install pipenv package
 RUN pip install pipenv
 #using pipenv we create txt file based on the files Pipfile Pipfile.lock and all dependencies of API are extracted to the requirments file
