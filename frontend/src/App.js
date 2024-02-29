@@ -7,7 +7,7 @@ import ImageCard from './components/ImageCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import Welcome from './components/Welcome';
 
-const USPLASH_KEY = process.env.REACT_APP_USPLASH_KEY;
+//const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5050';
 
