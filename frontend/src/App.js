@@ -25,7 +25,18 @@ const App = () => {
     }
   };
 
-  useEffect(() => getSavedImages(), []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${API_URL}/images`);
+        setImages(res.data || []);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  
+    fetchData();
+  }, []);
 
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
@@ -51,7 +62,7 @@ const App = () => {
 
     try {
       const res = await axios.get(`${API_URL}/images`, imageToBeSaved);
-      if (res?.datainserted_id) {
+      if (res.data?.inserted_id) {
         setImages(
           images.map((image) =>
             image.id === id ? { ...image, saved: true } : image,
